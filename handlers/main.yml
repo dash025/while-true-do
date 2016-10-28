@@ -10,7 +10,7 @@
   become: no
   local_action:
     module: wait_for
-      host="{{ ansible_host | default(inventory_hostname) }}"
+      host="{{ inventory_hostname }}"
       connect_timeout=10
       delay=10
       state=started
