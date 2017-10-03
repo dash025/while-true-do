@@ -18,10 +18,10 @@ galaxy_info:
     versions:
     - 23
     - 24
+    - 25
+    - 26
 
   galaxy_tags:
-    - locale
-    - config
-    - common
-    - keyboard
-    - localization
+    - update
+    - upgrade
+    - system
