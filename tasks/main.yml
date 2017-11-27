@@ -1,7 +1,7 @@
 ---
 - name: Install all updates
   yum: 
-    name: *
+    name: "*"
     state: latest
     update_cache: yes
   when: wtd_system_update_all == True
@@ -10,7 +10,7 @@
 
 - name: Install security updates
   yum:
-    name: *
+    name: "*"
     state: latest
     security: yes
     update_cache: yes
