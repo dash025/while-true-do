@@ -1,2 +1,3 @@
 ---
-system_update_restart: "true"
+wtd_system_update_security: True
+wtd_system_update_all: False

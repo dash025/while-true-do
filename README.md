@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/while-true-do/ansible-role-system-update.svg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-system-update)
 
 # Ansible Role: system-update
-| A role to update the system and reboot it.
+| A role to install updates or security updates.
 
 ## Installation
 
@@ -14,7 +14,7 @@ ansible-galaxy install while-true-do.system-update
 Github Link: <https://github.com/while-true-do/ansible-role-system-update>
 
 ```
-git clone https://github.com/while-true-do/ansible-role-system-update while-true-do.system-update
+git clone https://github.com/while-true-do/ansible-role-system-update.git while-true-do.system-update
 ```
 
 ## Requirements
@@ -29,7 +29,9 @@ None.
 
 ```
 # defaults/main.yml
-system_update_restart: "true"
+---
+wtd_system_update_security: True
+wtd_system_update_all: False
 ```
 
 ## Example Playbook
