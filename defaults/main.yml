@@ -1,3 +1,4 @@
 ---
-wtd_system_update_security: True
-wtd_system_update_all: False
+wtd_system_update_security_only: True
+wtd_system_update_autoreboot: True
+...

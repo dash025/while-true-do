@@ -1,20 +1,28 @@
 ---
-- name: Install all updates
-  yum: 
-    name: "*"
-    state: latest
-    update_cache: yes
-  when: wtd_system_update_all == True
-  tags:
-    - update
-
-- name: Install security updates
+- name: Install Updates
   yum:
     name: "*"
     state: latest
-    security: yes
+    security: "{{ wtd_system_update_security_only }}"
     update_cache: yes
-  when: wtd_system_update_security == True and wtd_system_update_all != True
+  register: wtd_system_update_list
   tags:
     - update
     - security
+
+- name: Reboot Machine
+  shell: sleep 2 && shutdown -r now "Ansible - Reboot for Patching"
+  async: 1
+  poll: 0
+  ignore_errors: true
+  when:
+    ( wtd_system_update_list.results | join("") | search("kernel") or 
+    wtd_system_update_list.results | join("") | search("glibc") ) and
+    ( wtd_system_update_autoreboot == True )
+
+- name: Wait for reboot
+  wait_for_connection:
+    timeout: 600
+    delay: 20  
+  when: wtd_system_update_autoreboot == True
+...
