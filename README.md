@@ -65,8 +65,8 @@ You can find the tests in [./tests](./tests/).
 Thank you so much for considering to contribute. Every contribution helps us. We are really happy, when somebody is joining the hard work. Please have a look at the links first.
 
 -   [Contribution Guidelines](./docs/CONTRIBUTING.md)
--   [Create an issue or Request](https://github.com/while-true-do/ansible-role-user/issues)
--   [See who was contributing already](https://github.com/while-true-do/ansible-role-user/graphs/contributors)
+-   [Create an issue or Request](https://github.com/while-true-do/ansible-role-system-update/issues)
+-   [See who was contributing already](https://github.com/while-true-do/ansible-role-system-update/graphs/contributors)
 
 ## License
 
