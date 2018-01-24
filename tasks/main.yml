@@ -15,6 +15,7 @@
   async: 1
   poll: 0
   ignore_errors: true
+  register: wtd_system_update_reboot
   when:
     ( wtd_system_update_list.results | join("") | search("kernel") or 
     wtd_system_update_list.results | join("") | search("glibc") ) and
@@ -24,5 +25,5 @@
   wait_for_connection:
     timeout: 600
     delay: 20  
-  when: wtd_system_update_autoreboot == True
+  when: wtd_system_update_autoreboot == True and wtd_system_update_reboot.changed
 ...
