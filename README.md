@@ -3,8 +3,6 @@
 # Ansible Role: system-update
 | A role to install updates or security updates.
 
-For now the role is compatible to Redhat/CentOS, only. This will change over time and more Derivates will be included.
-
 ## Motivation
 
 Updating a system is very common. Having a role, which helps for initial updates after installation or to enforce security updates, every now and then or via cron seems to be a good idea.
@@ -25,9 +23,10 @@ git clone https://github.com/while-true-do/ansible-role-system-update.git while-
 
 ## Requirements
 
-**Used Modules**
+Used Modules:
 
 -   [yum_module](http://docs.ansible.com/ansible/latest/yum_module.html)
+-   [command_module](http://docs.ansible.com/ansible/latest/command_module.html)
 
 ## Dependencies
 
@@ -38,10 +37,11 @@ None.
 Below you can find the default variables.
 
 ```yaml
----
-# Per default only security updates will be installed
-wtd_system_update_security_only: True
-# Auto Reboot, if needed. (kernel + glibc)
+# "yum update --security" is not supported in CentOS
+# For RedHat, it will be OK.
+wtd_system_update_security_only: False
+
+# Reboot when needed?
 wtd_system_update_autoreboot: True
 ```
 
@@ -57,8 +57,14 @@ Simple Example:
 
 ## Testing
 
-This role is currently tested with syntax-checking and linting.
-You can find the tests in [./tests](./tests/).
+All tests are located in [test directory](./tests/).
+
+Basic testing:
+
+```
+bash ./tests/test-spelling.sh
+bash ./tests/test-ansible.sh
+```
 
 ## Contribute / Bugs
 
