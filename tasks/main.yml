@@ -1,29 +1,32 @@
 ---
-- name: Install Updates
+- name: Install Package Updates
   yum:
     name: "*"
     state: latest
     security: "{{ wtd_system_update_security_only }}"
-    update_cache: yes
-  register: wtd_system_update_list
+    update_cache: True
   tags:
     - update
-    - security
+
+- name: Check for required Reboot
+  command: needs-restarting -r
+  ignore_errors: True
+  register: wtd_system_update_needs_reboot
+  changed_when: wtd_system_update_needs_reboot.rc != 0
+  failed_when: wtd_system_update_needs_reboot.rc != 1 and
+               wtd_system_update_needs_reboot.rc != 0
+  tags:
+    - update
 
 - name: Reboot Machine
   shell: sleep 2 && shutdown -r now "Ansible - Reboot for Patching"
   async: 1
   poll: 0
-  ignore_errors: true
-  register: wtd_system_update_reboot
-  when:
-    ( wtd_system_update_list.results | join("") | search("kernel") or 
-    wtd_system_update_list.results | join("") | search("glibc") ) and
-    ( wtd_system_update_autoreboot == True )
+  ignore_errors: True
+  when: wtd_system_update_autoreboot == True and wtd_system_update_needs_reboot.rc == 1
 
-- name: Wait for reboot
+- name: Wait for Reboot
   wait_for_connection:
     timeout: 600
-    delay: 20  
-  when: wtd_system_update_autoreboot == True and wtd_system_update_reboot.changed
-...
+    delay: 20
+  when: wtd_system_update_autoreboot == True and wtd_system_update_needs_reboot.rc == 1

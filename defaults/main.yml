@@ -1,4 +1,7 @@
 ---
-wtd_system_update_security_only: True
+# "yum update --security" is not supported in CentOS
+# For RedHat, it will be OK.
+wtd_system_update_security_only: False
+
+# Reboot when needed?
 wtd_system_update_autoreboot: True
-...
