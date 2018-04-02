@@ -25,12 +25,12 @@ git clone https://github.com/while-true-do/ansible-role-system-update.git while-
 
 Used Modules:
 
--   [command_module](https://docs.ansible.com/ansible/latest/command_module.html)
+-   [command_module](https://docs.ansible.com/ansible/latest/modules/command_module.html)
 -   [wait_for_connection_module](https://docs.ansible.com/ansible/latest/modules/wait_for_connection_module.html)
 
 Distribution specific modules:
 
--   [yum_module](https://docs.ansible.com/ansible/latest/yum_module.html)
+-   [yum_module](https://docs.ansible.com/ansible/latest/modules/yum_module.html)
 -   [dnf_module](https://docs.ansible.com/ansible/latest/modules/dnf_module.html)
 
 ## Dependencies
