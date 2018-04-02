@@ -25,8 +25,13 @@ git clone https://github.com/while-true-do/ansible-role-system-update.git while-
 
 Used Modules:
 
--   [yum_module](http://docs.ansible.com/ansible/latest/yum_module.html)
--   [command_module](http://docs.ansible.com/ansible/latest/command_module.html)
+-   [command_module](https://docs.ansible.com/ansible/latest/command_module.html)
+-   [wait_for_connection_module](https://docs.ansible.com/ansible/latest/modules/wait_for_connection_module.html)
+
+Distribution specific modules:
+
+-   [yum_module](https://docs.ansible.com/ansible/latest/yum_module.html)
+-   [dnf_module](https://docs.ansible.com/ansible/latest/modules/dnf_module.html)
 
 ## Dependencies
 
@@ -70,6 +75,7 @@ bash ./tests/test-ansible.sh
 
 Thank you so much for considering to contribute. Every contribution helps us. We are really happy, when somebody is joining the hard work. Please have a look at the links first.
 
+-   [Code of Conduct](./docs/CODE_OF_CONDUCT.md)
 -   [Contribution Guidelines](./docs/CONTRIBUTING.md)
 -   [Create an issue or Request](https://github.com/while-true-do/ansible-role-system-update/issues)
 -   [See who was contributing already](https://github.com/while-true-do/ansible-role-system-update/graphs/contributors)
@@ -80,7 +86,7 @@ This work is licensed under a [BSD License](https://opensource.org/licenses/BSD-
 
 ## Author Information
 
-Blog: [blog.while-true-do.org](https://blog.while-true-do.org)
+Site: [while-true-do.org](https://while-true-do.org)
 
 Mail: [hello@while-true-do.org](mailto:hello@while-true-do.org)
 
