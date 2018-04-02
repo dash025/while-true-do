@@ -42,12 +42,11 @@ None.
 Below you can find the default variables.
 
 ```yaml
-# "yum update --security" is not supported in CentOS
-# For RedHat, it will be OK.
-wtd_system_update_security_only: False
-
-# Reboot when needed?
+# Reboot when needed (CentOS, RedHat).
 wtd_system_update_autoreboot: True
+
+# Only install security Updates (RedHat).
+wtd_system_update_security_only: False
 ```
 
 ## Example Playbook
