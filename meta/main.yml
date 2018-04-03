@@ -1,11 +1,10 @@
-dependencies: [while-true-do.yum]
+dependencies: [ ]
 
 galaxy_info:
   author: while-true-do.org
   description: A role to install updates or security updates.
   company: while-true-do.org
 
-  issue_tracker_url: https://github.com/while-true-do/ansible-role-system-update/issues
   github_branch: master
   license: BSD
 
@@ -15,6 +14,10 @@ galaxy_info:
   - name: EL
     versions:
     - 7
+  - name: Fedora
+    versions:
+    - 27
+    - 28
 
   galaxy_tags:
     - update

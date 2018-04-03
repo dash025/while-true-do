@@ -1,0 +1,10 @@
+---
+# ansible_distribution="Fedora" specific tasks
+- name: Install Package Updates
+  dnf:
+    name: "*"
+    state: latest
+  tags:
+    - update
+
+# ToDo: Find a valid way to track dnf/Fedora reboot needs.
