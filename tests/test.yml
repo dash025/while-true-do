@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - while_true_do.system-update
+    - while_true_do.system_update

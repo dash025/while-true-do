@@ -24,7 +24,7 @@ install:
   - ansible --version
 
   # Link github repo to ansible-galaxy name
-  - ln -s  $PWD ../while_true_do.system-update
+  - ln -s  $PWD ../while_true_do.system_update
 
 # Run the tests
 script:
