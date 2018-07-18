@@ -18,7 +18,7 @@ ansible-galaxy install while_true_do.system_update
 Install from [Github](https://github.com/while-true-do/ansible-role-system-update)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-system-update.git while_true_do.system-update
+git clone https://github.com/while-true-do/ansible-role-system-update.git while_true_do.system_update
 ```
 
 ## Requirements
@@ -56,7 +56,7 @@ Simple Example:
 ```
 - hosts: servers
   roles:
-    - { role: while_true_do.system-update }
+    - { role: while_true_do.system_update }
 ```
 
 ## Testing
