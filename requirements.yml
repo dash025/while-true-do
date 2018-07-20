@@ -1,0 +1,2 @@
+# from Ansible Galaxy
+- src: while_true_do.reboot
