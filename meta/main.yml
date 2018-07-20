@@ -1,6 +1,7 @@
 dependencies: [ ]
 
 galaxy_info:
+  role_name: system_update
   author: while-true-do.org
   description: A role to install updates or security updates.
   company: while-true-do.org

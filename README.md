@@ -9,16 +9,16 @@ Updating a system is very common. Having a role, which helps for initial updates
 
 ## Installation
 
-Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do/system-update)
+Install from [Ansible Galaxy](https://galaxy.ansible.com/while_true_do/system_update)
 
 ```
-ansible-galaxy install while-true-do.system-update
+ansible-galaxy install while_true_do.system_update
 ```
 
 Install from [Github](https://github.com/while-true-do/ansible-role-system-update)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-system-update.git while-true-do.system-update
+git clone https://github.com/while-true-do/ansible-role-system-update.git while_true_do.system_update
 ```
 
 ## Requirements
@@ -56,7 +56,7 @@ Simple Example:
 ```
 - hosts: servers
   roles:
-    - { role: while-true-do.system-update }
+    - { role: while_true_do.system_update }
 ```
 
 ## Testing

@@ -6,7 +6,7 @@ python:
 
 sudo: false
 
-# Install ansible
+# Install python-pip
 addons:
   apt:
     packages:
@@ -24,7 +24,7 @@ install:
   - ansible --version
 
   # Link github repo to ansible-galaxy name
-  - ln -s  $PWD ../while-true-do.system-update
+  - ln -s  $PWD ../while_true_do.system_update
 
 # Run the tests
 script:
