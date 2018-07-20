@@ -26,7 +26,6 @@ git clone https://github.com/while-true-do/ansible-role-system-update.git while_
 Used Modules:
 
 -   [command_module](https://docs.ansible.com/ansible/latest/modules/command_module.html)
--   [wait_for_connection_module](https://docs.ansible.com/ansible/latest/modules/wait_for_connection_module.html)
 
 Distribution specific modules:
 
