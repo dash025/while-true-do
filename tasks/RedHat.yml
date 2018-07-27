@@ -6,6 +6,7 @@
     state: present
   tags:
     - update
+  become: yes
 
 - name: Install Package Updates
   yum:
@@ -15,6 +16,7 @@
     update_cache: True
   tags:
     - update
+  become: yes
 
 - name: Check for required Reboot
   command: needs-restarting -r
