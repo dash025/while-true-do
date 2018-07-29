@@ -34,7 +34,7 @@ Distribution specific modules:
 
 ## Dependencies
 
-None.
+-   [reboot](https://github.com/while-true-do/ansible-role-reboot)
 
 ## Role Variables
 
