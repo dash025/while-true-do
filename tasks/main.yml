@@ -8,6 +8,7 @@
   async: 1
   poll: 0
   ignore_errors: True
+  become: yes
   when: wtd_system_update_autoreboot == True and wtd_system_update_needs_reboot.rc == 1
 
 - name: Wait for Reboot
